@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+2020/04/09 17:21:10.145,2876,HTTP Request,200,OK,Thread Group 1-1,text,true,,45638,242,1,1,https://lifechangers.org/,942,0,316
+2020/04/09 17:21:10.145,942,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,text,true,,442,121,1,1,http://lifechangers.org/,942,0,316
+2020/04/09 17:21:11.089,1932,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,45196,121,1,1,https://lifechangers.org/,1625,0,989

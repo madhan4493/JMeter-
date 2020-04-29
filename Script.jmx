@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<testelement class="org.apache.jmeter.testelement.TestPlan">
+<property name="TestPlan.functional_mode">false</property>
+<property name="TestElement.test_class">org.apache.jmeter.testelement.TestPlan</property>
+<property name="TestElement.gui_class">org.apache.jmeter.control.gui.TestPlanGui</property>
+<collection name="TestPlan.thread_groups" class="java.util.LinkedList"></collection>
+<property name="TestElement.name">Badboy Test Plan</property>
+<testelement name="TestPlan.user_defined_variables" class="org.apache.jmeter.config.Arguments">
+<property name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+<property name="TestElement.gui_class">org.apache.jmeter.config.gui.ArgumentsPanel</property>
+<property name="TestElement.name">Argument List</property>
+<collection name="Arguments.arguments" class="java.util.ArrayList"></collection>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.threads.ThreadGroup">
+<property name="TestElement.test_class">org.apache.jmeter.threads.ThreadGroup</property>
+<property name="TestElement.gui_class">org.apache.jmeter.threads.gui.ThreadGroupGui</property>
+<property name="TestElement.name">Thread Group</property>
+<testelement name="ThreadGroup.main_controller" class="org.apache.jmeter.control.LoopController">
+<property name="LoopController.continue_forever">false</property>
+<property name="TestElement.test_class">org.apache.jmeter.control.LoopController</property>
+<property name="LoopController.loops">1</property>
+<property name="TestElement.gui_class">org.apache.jmeter.control.gui.LoopControlPanel</property>
+<property name="TestElement.name">Loop Controller</property>
+</testelement>
+<property name="ThreadGroup.num_threads">1</property>
+<property name="ThreadGroup.ramp_time">1</property>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.CookieManager">
+<property name="TestElement.test_class">org.apache.jmeter.protocol.http.control.CookieManager</property>
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.gui.CookiePanel</property>
+<property name="TestElement.name">HTTP Cookie Manager</property>
+<collection name="CookieManager.cookies" class="java.util.ArrayList"></collection>
+</testelement>
+</node>
+<node>
+<testelement class="org.apache.jmeter.modifiers.UserParameters">
+<property name="TestElement.test_class">org.apache.jmeter.modifiers.UserParameters</property>
+<property name="TestElement.gui_class">org.apache.jmeter.modifiers.gui.UserParametersGui</property>
+<property name="TestElement.name">User Parameters</property>
+<property name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property name="TestElement.per_iteration" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<collection name="UserParameters.names" class="java.util.ArrayList">
+<property name="VIEWSTATE">VIEWSTATE</property><property name="jsessionid">jsessionid</property></collection>
+<collection name="UserParameters.thread_values" class="java.util.ArrayList">
+<collection name="" class="java.util.ArrayList">
+<property name=""></property><property name=""></property></collection>
+</collection>
+</testelement>
+</node>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.HeaderManager">
+<property xml:space="preserve" name="TestElement.gui_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.gui.HeaderPanel</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">HTTP Header Manager</property>
+<property xml:space="preserve" name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property xml:space="preserve" name="TestElement.test_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.control.HeaderManager</property>
+<collection name="HeaderManager.headers" propType="org.apache.jmeter.testelement.property.CollectionProperty" class="java.util.ArrayList">
+</collection>
+</testelement>
+</node>
+</node>
+</node>
